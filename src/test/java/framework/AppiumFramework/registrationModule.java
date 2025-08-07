@@ -40,11 +40,6 @@ public class registrationModule extends AndroidBaseTest {
 		
         // Store credentials for Login module to use
 //        SharedTestData.storeUserCredentials(email, password);
-
-		
-	       // Store for other tests to use
-//        context.setAttribute("registeredEmail", email);
-//        context.setAttribute("registeredPassword", password);
 		
 		// Step 1: Click Register Button
 		registrationPage.clickRegistrationButton();
@@ -55,7 +50,6 @@ public class registrationModule extends AndroidBaseTest {
 		registrationPage.enterLastName(input.get("lastName"));
 		registrationPage.enterEmail(email);
 		registrationPage.enterPhoneNumber(input.get("phoneNumber"));
-//		registrationPage.enterPassword(input.get("password"));
 		registrationPage.enterPassword(password);
 		registrationPage.clickRegistrationButton();
 				
