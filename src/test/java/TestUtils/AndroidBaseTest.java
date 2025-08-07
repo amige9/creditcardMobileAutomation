@@ -27,6 +27,7 @@ public class AndroidBaseTest extends AppiumUtils {
 	public AndroidDriver driver;
 	public AppiumDriverLocalService service;
 	public ExtentReports extent;
+	public EmailService emailService;
 
 //	public BaseTest(AndroidDriver driver) 
 //	{
@@ -38,6 +39,10 @@ public class AndroidBaseTest extends AppiumUtils {
 
 	@BeforeClass(alwaysRun = true)
 	public void ConfigAppium() throws URISyntaxException, IOException {
+		
+        // Initialize EmailService once for the entire test class
+        emailService = new EmailService();
+        System.out.println("✅ EmailService initialized");
 
 		Properties properties = new Properties();
 		Path filePath = Paths.get(System.getProperty("user.dir"), "src", "main", "java", "resources",

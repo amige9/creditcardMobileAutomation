@@ -4,14 +4,14 @@
 <listeners>
 <listener class-name="TestUtils.Listeners"></listener>
 </listeners>
-  <test thread-count="5" name="End to end Framework Test">
+  <test thread-count="5" name="Registration Test">
     <classes>
-      <class name="framework.AppiumFramework.eCommerce_tc_4_Hybrid"/>
+      <class name="framework.AppiumFramework.registrationModule"/>
     </classes>
   </test> <!-- Test -->
-    <test thread-count="5" name="Framework 2">
+    <test thread-count="5" name="Login Test">
     <classes>
-      <class name="framework.AppiumFramework.eCommerce_tc_4_Hybrid2"/>
+      <class name="framework.AppiumFramework.loginModule"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

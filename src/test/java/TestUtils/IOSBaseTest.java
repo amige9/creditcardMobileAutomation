@@ -34,30 +34,14 @@ public class IOSBaseTest extends AppiumUtils {
 
 	public IOSDriver driver;
 	public AppiumDriverLocalService service;
+	public EmailService emailService;
 
 	@BeforeClass(alwaysRun = true)
 	public void ConfigAppium() throws URISyntaxException, IOException {
-//        // Create a custom environment map with Android SDK paths
-//        Map<String, String> env = new HashMap<>(System.getenv());
-//        env.put("ANDROID_HOME", "C:\\Users\\olamide.ige\\AppData\\Local\\Android\\Sdk");
-//        env.put("ANDROID_SDK_ROOT", "C:\\Users\\olamide.ige\\AppData\\Local\\Android\\Sdk");
-// 
-//
-//        
-		// Create and start the Appium service
-//        AppiumServiceBuilder builder = new AppiumServiceBuilder()
-//            .withAppiumJS(new File("C:\\Users\\olamide.ige\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
-//            .withIPAddress("127.0.0.1")
-//            .usingPort(4723)
-//            .withEnvironment(env); 
-//            
-//        service = AppiumDriverLocalService.buildService(builder);
-//        service.start();
-
-//		service = new AppiumServiceBuilder()
-//				.withAppiumJS(new File("/Users/olams99/.npm-global/lib/node_modules/appium/build/lib/main.js"))
-//				.withIPAddress("127.0.0.1").usingPort(4723).build();
-//		service.start();
+		
+        // Initialize EmailService once for the entire test class
+        emailService = new EmailService();
+        System.out.println("✅ EmailService initialized");
 
 		Properties properties = new Properties();
 		Path filePath = Paths.get(System.getProperty("user.dir"), 
