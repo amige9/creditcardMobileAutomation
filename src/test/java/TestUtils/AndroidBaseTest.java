@@ -81,7 +81,7 @@ public class AndroidBaseTest extends AppiumUtils {
 		// App path using relative path from project root
 //		String projectPath = System.getProperty("user.dir");
 		String appPath = projectPath + File.separator + "src" + File.separator + "test" + File.separator + "java"
-				+ File.separator + "resources" + File.separator + "credit_app_1.0.0.39.apk";
+				+ File.separator + "resources" + File.separator + "credit_app_1.0.0.81.apk";
 		
 		options.setApp(appPath);
 

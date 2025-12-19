@@ -48,6 +48,7 @@ public class Loginpage extends AndroidActions {
 	public void enterPassword(String password) {
 		passwordTextField.click();
 		passwordTextField.sendKeys(password);
+		driver.hideKeyboard();
 	}
 	
 	public void clickLoginSignIn() {
